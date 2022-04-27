@@ -1,5 +1,7 @@
-const path = require('path')
+// Initialises and configures dotenv for use of .env file.
 require('dotenv').config()
+
+const path = require('path')
 const mockAPIResponse = require('./mockAPI.js')
 
 const express = require('express')
