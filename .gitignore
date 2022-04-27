@@ -3,3 +3,5 @@ dist
 README.md
 REQUIREMENTS.md
 .env*
+coverage
+__tests__
