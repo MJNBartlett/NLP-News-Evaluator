@@ -14,3 +14,34 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+#results{
+  line-height: 1.6em;
+  padding: 30px 40px;
+}
+
+#results p{
+  font-weight: 600;
+}
+
+#results span{
+  font-weight: 400;
+}
+
+#results--title{
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.section-box{
+  background: lightgrey;
+}
+.results-box{
+
+}
+#website{
+  font-weight: 400;
+  font-style: italic;
+  margin: 20px 0;
+}
