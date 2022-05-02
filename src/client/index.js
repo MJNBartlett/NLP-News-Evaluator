@@ -7,9 +7,7 @@ import './styles/footer.css'
 import './styles/form.css'
 import './styles/header.css'
 
-console.log(checkForName);
-
-alert("I EXIST")
+console.log("main index.js file included");
 
 export {
  checkForName,
