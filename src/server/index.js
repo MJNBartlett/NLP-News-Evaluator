@@ -35,19 +35,20 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
-app.get('/test', function (req, res) {
-  console.log("Recieved GET Request");
+app.post('/test', function (req, res) {
+  console.log("Recieved POST Request");
+  let urlSent = req.body.URL
+  console.log("URL Recieved", req.body.URL);
+
   //Passing res variable in order to place res.send() method in async function.
-  getSentiment(res)
-  console.log("Ran function, sent response");
+  getSentiment(res, urlSent);
 })
 
 
-async function getSentiment(res){
-  const urlEntered = 'https://mjnbartlett.github.io/Blog-Project/coming-soon.html';
+async function getSentiment(res, urlSent){
   const formdata = new FormData();
   formdata.append("key", process.env.API_KEY);
-  formdata.append("url", urlEntered);
+  formdata.append("url", urlSent);
   formdata.append("lang", "en");
 
   //Boilerplate options provided by MeaningCloud API
@@ -58,9 +59,7 @@ async function getSentiment(res){
     let status = response.status
     let responseBody = await response.json()
 
-    console.log(status)
     res.send(responseBody);
-
   }catch(error){
     console.log('error', error)
   }
