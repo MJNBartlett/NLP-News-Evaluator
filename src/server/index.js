@@ -5,7 +5,6 @@ const FormData = require('form-data'); //Required for FormData usage.
 const fetch = require('node-fetch') //Required for fetch request - node-fetch@2 reqiured version.
 
 const path = require('path')
-const mockAPIResponse = require('./mockAPI.js')
 
 const express = require('express')
 const app = express()
@@ -21,9 +20,6 @@ const cors = require('cors');
 app.use(cors());
 
 app.use(express.static('dist'))
-
-// Confirm env file is accessible.
-console.log(`Your API key is ${process.env.API_KEY}`);
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
@@ -43,7 +39,6 @@ app.post('/test', function (req, res) {
   //Passing res variable in order to place res.send() method in async function.
   getSentiment(res, urlSent);
 })
-
 
 async function getSentiment(res, urlSent){
   const formdata = new FormData();
