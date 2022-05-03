@@ -1,47 +1,63 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #182738;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
+  padding: 0 12px;
 }
-
 main {
-    flex: 2;
+  flex: 2;
 }
-
 section {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin: 50px auto;
 }
-
+h1{
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1.1em;
+}
+h2{
+  font-size: 2.5em;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.theme-color{
+  color: #A6FFFA;
+}
+.heading-container{}
+.intro-text{
+  font-size: 1em;
+  margin-top: 30px;
+  line-height: 1.6em;
+}
 #results{
   line-height: 1.6em;
   padding: 30px 40px;
-}
-
-#results p{
   font-weight: 600;
 }
-
+#results p{
+  font-size: 1em;
+}
 #results span{
   font-weight: 400;
 }
-
 #results--title{
   font-size: 1.5em;
   font-weight: 800;
   margin-bottom: 20px;
 }
-
-.section-box{
-  background: lightgrey;
-}
+.section-box{}
 .results-box{
-
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
 }
 #website{
   font-weight: 400;
   font-style: italic;
   margin: 20px 0;
+  color: #555;
 }

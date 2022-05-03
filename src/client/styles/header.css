@@ -1,5 +1,23 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  background: #001328;
+  overflow: visible;
+  position: fixed;
+  margin-left: -12px;
+}
+.header-name{
+  font-weight: 800;
+  font-size: 1.8em;
+  padding: 0 30px;
+  margin-top: -5px;
+}
+.header-title{
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 0 30px;
 }
