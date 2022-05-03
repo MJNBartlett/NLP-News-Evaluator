@@ -3,30 +3,40 @@
     <head>
         <meta charset="utf-8">
         <title>NLP News Evaluator</title>
-        <style media="screen">
-
-        </style>
     </head>
     <body>
         <header>
-            <div class="">
-                <p>Logo</p>
+            <div class="header-title">
+                <p>NLP News Evaluator</p>
             </div>
-            <div class="">
-                navigation
+            <div class="header-name">
+                <p class="theme-color">mjnb</p>
             </div>
         </header>
         <main>
+          <section>
+            <div class="heading-container">
+              <h1>Natural<br>Language<br>Processing<span class="theme-color">.</span></h1>
+              <h2>News Evaluator</h2>
+            </div>
+            <div class="intro-text">
+              <p>Evaluating the news has never been simpler.</p>
+              <p>Using the form below, enter the URL of a news website or blog you would like assessed, and we'll take care of the rest!</p>
+            </div>
+          </section>
             <section>
                 <form class="" onsubmit="Client.handleSubmit(event)">
-                    <input id="URL-input" type="text" name="input" value="" placeholder="URL">
-                    <input type="submit" name="" value="submit" onclick="Client.handleSubmit(event)" onsubmit="Client.handleSubmit(event)">
+                    <label for="URL-input">Enter the website URL below:</label>
+                    <input id="URL-input" type="text" name="input" value="" placeholder="eg. www.mjnbartlett.com">
+                    <div class="submit-button-container">
+                      <input id="submit-button" type="submit" name="" value="submit" onclick="Client.handleSubmit(event)" onsubmit="Client.handleSubmit(event)">
+                    </div>
                 </form>
             </section>
             <section class="section-box results-box">
                 <div id="results">
-                  <p id="results--title">Results</p>
-                  <p id="website"></p>
+                  <h3 id="results--title">Results</h3>
+                  <p id="website">Website</p>
                   <p>Score: <span id="score_tag"></span></p>
                   <p>Subjectivity: <span id="subjectivity"></span></p>
                   <p>Agreement: <span id="agreement"></span></p>
