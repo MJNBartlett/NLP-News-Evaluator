@@ -10,7 +10,7 @@ const express = require('express')
 const app = express()
 
 
-//Here we are configuring express to use body-parser as middle-ware.
+//Configuring express to use body-parser as middle-ware.
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,7 +23,6 @@ app.use(express.static('dist'))
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
-    // res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 // designates what port the app will listen to for incoming requests
@@ -51,10 +50,9 @@ async function getSentiment(res, urlSent){
   const response = await fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
 
   try{
-    let status = response.status
     let responseBody = await response.json()
-
     res.send(responseBody);
+
   }catch(error){
     console.log('error', error)
   }
