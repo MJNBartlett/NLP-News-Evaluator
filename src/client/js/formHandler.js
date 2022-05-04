@@ -1,31 +1,50 @@
 async function handleSubmit(event) {
     event.preventDefault()
 
-    // This is where a form field verification will run.
-    let formField = document.getElementById('URL-input');
+    const mainForm = document.getElementById('main-form');
+    const submitButton = document.getElementById('submit-button');
+    const formErrorBox = document.getElementById('form-error-box');
+    const formField = document.getElementById('URL-input');
+
     let formText = formField.value;
     let formTextObject = {'URL': formField.value};
-    // Client.checkForName(formText)
 
-    //Fetch POST request for URL to server
-    const response = await fetch('http://localhost:8081/test', {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(formTextObject)
-    });
+    formErrorBox.classList = 'form-error-box visibility-hidden'; //Resets the class list to hide the error message if previously displayed.
 
-    try{
-      console.log("Entering try");
-      let getData = await response.json(); // 'await' required otherwise the variables in updateUI() will be returned as 'undefined'.
+    // Form field URL validation here - regex based, and min 4 characters.
+    if(Client.checkForURL(formText)){
+      submitButton.value = 'loading...' //text displayed in submit button changed to indicate loading.
 
-      updateUI(getData, formText);
+      //Fetch POST request for submitted URL to server
+      const response = await fetch('http://localhost:8081/test', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(formTextObject)
+      });
 
-    }catch(error){
-      console.log("error", error)
+      try{
+        console.log("Entering try");
+        let getData = await response.json(); // 'await' required otherwise the variables in updateUI() will be returned as 'undefined'.
+
+        updateUI(getData, formText);
+        formField.value = '';
+        submitButton.value = 'submit'
+
+      }catch(error){
+        console.log("error", error)
+        // Button text should change back regardless of try or catch.
+        submitButton.value = 'submit'
+      }
+    }else{
+      function toggleRed(){
+        formErrorBox.classList = 'form-error-box'; // Displays invalid URL message.
+        mainForm.classList.toggle('form-error'); //Toggle class for changing shadow/outline of form box from green to red.
+      }
+      // Calling function twice, with time delay between toggling on and off.
+      toggleRed();
+      setTimeout(toggleRed, 1500);
     }
-
-    formField.value = '';
 }
 
 function updateUI(getData, formText){
@@ -48,7 +67,6 @@ function updateUI(getData, formText){
   confidenceSpan.innerHTML = confidence;
   scoreTagSpan.innerHTML = scoreTag;
   ironySpan.innerHTML = irony;
-
 }
 
 export { handleSubmit }
