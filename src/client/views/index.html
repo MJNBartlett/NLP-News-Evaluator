@@ -25,9 +25,12 @@
             </div>
           </section>
             <section>
-                <form class="" onsubmit="Client.handleSubmit(event)">
+                <form id="main-form" class="" onsubmit="Client.handleSubmit(event)">
                     <label for="URL-input">Enter the website URL below:</label>
                     <input id="URL-input" type="text" name="input" value="" placeholder="eg. www.mjnbartlett.com">
+                    <div id="form-error-box" class="form-error-box visibility-hidden">
+                      <p>Invalid URL — check the URL entered, and try again.</p>
+                    </div>
                     <div class="submit-button-container">
                       <input id="submit-button" type="submit" name="" value="submit" onclick="Client.handleSubmit(event)" onsubmit="Client.handleSubmit(event)">
                     </div>
