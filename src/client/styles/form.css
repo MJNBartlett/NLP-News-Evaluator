@@ -1,9 +1,23 @@
 form {
+  box-shadow: 0 0 0 6px #182738, 0 0 0 10px #A6FFFA;
   border-radius: 20px;
   padding: 40px;
   background: #fff;
-  box-shadow: 0 0 0 6px #182738, 0 0 0 10px #A6FFFA;
+}
+#main-form{
   width: 100%;
+}
+.form-error{
+  box-shadow: 0 0 0 6px #182738, 0 0 0 10px #fc8383;
+}
+.form-error-box{
+  color: #f55;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+.visibility-hidden{
+  visibility: hidden;
 }
 input {
   padding: 5px 20px;
@@ -19,7 +33,7 @@ label{
 .submit-button-container{
   width: 200px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 #URL-input{
   appearance: none;
@@ -40,6 +54,7 @@ label{
   height: 40px;
   color: #001328;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 #submit-button:hover{
   background: #001328;
