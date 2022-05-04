@@ -27,7 +27,7 @@ async function handleSubmit(event) {
         console.log("Entering try");
         let getData = await response.json(); // 'await' required otherwise the variables in updateUI() will be returned as 'undefined'.
 
-        updateUI(getData, formText);
+        Client.updateUI(getData, formText);
         formField.value = '';
         submitButton.value = 'submit'
 
@@ -42,31 +42,9 @@ async function handleSubmit(event) {
         mainForm.classList.toggle('form-error'); //Toggle class for changing shadow/outline of form box from green to red.
       }
       // Calling function twice, with time delay between toggling on and off.
-      toggleRed();
-      setTimeout(toggleRed, 1500);
+      toggleRed(); //Toggle on.
+      setTimeout(toggleRed, 1500);//Toggle off after delay.
     }
-}
-
-function updateUI(getData, formText){
-  const websiteSpan = document.getElementById('website');
-  const agreementSpan = document.getElementById('agreement');
-  const subjectivitySpan = document.getElementById('subjectivity');
-  const confidenceSpan = document.getElementById('confidence');
-  const scoreTagSpan = document.getElementById('score_tag');
-  const ironySpan = document.getElementById('irony');
-
-  let agreement = getData.agreement;
-  let subjectivity = getData.subjectivity;
-  let confidence = getData.confidence;
-  let scoreTag = getData.score_tag;
-  let irony = getData.irony;
-
-  websiteSpan.innerHTML = formText;
-  agreementSpan.innerHTML = agreement;
-  subjectivitySpan.innerHTML = subjectivity;
-  confidenceSpan.innerHTML = confidence;
-  scoreTagSpan.innerHTML = scoreTag;
-  ironySpan.innerHTML = irony;
 }
 
 export { handleSubmit }
