@@ -41,23 +41,23 @@ label{
   border: 2px solid #182738;
   font-size: 1em;
   height: 2.2rem;
-  color: #001328;
+  color: #002249;
 }
 #submit-button{
   appearance: none;
-  border: 3px solid #001328;
+  border: 3px solid #002249;
   background: none;
   margin: auto;
   border-radius: 20px;
   font-size: 1em;
   font-weight: 600;
   height: 40px;
-  color: #001328;
+  color: #002249;
   cursor: pointer;
   transition: 0.2s ease;
 }
 #submit-button:hover{
-  background: #001328;
+  background: #002249;
   color: white;
   text-decoration: underline;
   text-decoration-color: #A6FFFA;

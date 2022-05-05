@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #182738;
+  background: #002249;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #fff;
   padding: 0 12px;
@@ -36,6 +36,7 @@ h2{
   font-size: 1em;
   margin-top: 40px;
   line-height: 1.6em;
+  max-width: 750px;
 }
 #results{
   line-height: 1.6em;
