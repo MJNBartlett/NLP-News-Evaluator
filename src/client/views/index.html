@@ -16,12 +16,12 @@
         <main>
           <section>
             <div class="heading-container">
-              <h1>Natural<br>Language<br>Processing<span class="theme-color">.</span></h1>
+              <h1>Natural Language<br>Processing<span class="theme-color">.</span></h1>
               <h2>News Evaluator</h2>
             </div>
             <div class="intro-text">
               <p>Evaluating the news has never been simpler.</p>
-              <p>Using the form below, enter the URL of a news website or blog you would like assessed, and we'll take care of the rest!</p>
+              <p>Using the form below, enter the URL of a news website or blog you would like assessed, and we'll take care of the rest. So give it a go, and check out the results — they might not be what you expect!</p>
             </div>
           </section>
             <section>
@@ -51,5 +51,14 @@
         <footer>
             <p class="footer-text">Designed by Matt Bartlett</p>
         </footer>
+        <script>
+         // Check that service workers are supported
+         if ('serviceWorker' in navigator) {
+             // Use the window load event to keep the page load performant
+             window.addEventListener('load', () => {
+                 navigator.serviceWorker.register('/service-worker.js');
+             });
+         }
+        </script>
     </body>
 </html>
