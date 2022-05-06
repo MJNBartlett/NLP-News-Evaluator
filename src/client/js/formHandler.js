@@ -1,5 +1,5 @@
 async function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
     const mainForm = document.getElementById('main-form');
     const submitButton = document.getElementById('submit-button');
@@ -43,7 +43,7 @@ async function handleSubmit(event) {
           submitButton.value = 'submit';
         }
       }else{
-        formErrorBox.innerHTML = '<p>Invalid URL — check the URL entered, and try again.</p>'
+        formErrorBox.innerHTML = '<p>Invalid URL — check the URL entered, and try again.</p>';
         // Calling function twice, with time delay between toggling on and off.
         toggleRed(); //Toggle on.
         setTimeout(toggleRed, 1500);//Toggle off after delay.
@@ -58,4 +58,4 @@ async function handleSubmit(event) {
     }
 }
 
-export { handleSubmit }
+export { handleSubmit };
