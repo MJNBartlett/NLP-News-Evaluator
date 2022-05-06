@@ -18,7 +18,7 @@ You can find out more about the project below, or check out my profile for some 
 
 The project is built on a static template page provided by Udacity (this can be found in the resources section below).
 
-The primary purpose of the project is to create a web app that utilise a Natural Language Processing *(NLP)* API call, on a user-provided URL. More specifically, the API called within this application is used for Sentiment Analysis. Which is described by MeaningCloud as: 
+The primary purpose of the project is to create a web app that utilises a Natural Language Processing *(NLP)* API call, on a user-provided URL. More specifically, the API called within this application is used for Sentiment Analysis, which is described by MeaningCloud:
 
 >The text provided is analyzed to determine if it expresses a positive, neutral or negative sentiment (or if it is impossible to detect). In order to do so, the individual phrases are identified and the relationship between them is evaluated, which results in a global polarity value of the text as a whole.
 
@@ -30,6 +30,8 @@ Following the API call, the information returned by the server is forwarded to t
 
 ## Live preview
 [(Back to top)](#table-of-contents)
+
+**:(**
 
 There isn't currently a live demo available for this project, but this is a feature I intend to implement soon. So make sure to come back soon for further updates.
 
