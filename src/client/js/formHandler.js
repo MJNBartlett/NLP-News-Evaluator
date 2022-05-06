@@ -9,9 +9,9 @@ async function handleSubmit(event) {
     let formText = formField.value;
     let formTextObject = {'URL': formField.value};
 
-    //Leaving this function nested as it's only called within the context of handleSubmit().
+    //Function for visually indicating an error is encoutered in UI.
     function toggleRed(){
-      formErrorBox.classList = 'form-error-box'; // Removes error box visibility-hidden class. Displays error.
+      formErrorBox.classList = 'form-error-box'; // Removes error box visibility-hidden class. Displays error text.
       mainForm.classList.toggle('form-error'); //Toggle class for changing shadow/outline of form box from green to red.
     }
 

@@ -7,7 +7,7 @@ function updateUI(getData, formText){
   const scoreTagSpan = document.getElementById('score_tag');
   const ironySpan = document.getElementById('irony');
 
-  // Check for if correct response is recieved from API.
+  // Check if correct response is recieved from API.
   if(getData.status.msg === 'OK' ){
     //Updating HTML Elements with getData object values.
     websiteSpan.innerHTML = formText;
