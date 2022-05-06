@@ -54,7 +54,6 @@ label{
   height: 40px;
   color: #002249;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 #submit-button:hover{
   background: #002249;

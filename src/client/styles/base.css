@@ -55,7 +55,9 @@ h2{
   font-weight: 800;
   margin-bottom: 20px;
 }
-.section-box{}
+.section-box{
+  margin: auto;
+}
 .results-box{
   background: #fff;
   color: #000;
